@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    {% for pet in pets %}
+   <li> <a href="{{pet.id}}">{{pet.name}}</a>
+        <small> <b>&ensp; {% if pet.available %} Available {% endif %}</b></small>
+    </li>
+    {% endfor %}
+{% endblock %}
